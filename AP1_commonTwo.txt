@@ -1,0 +1,25 @@
+//AP-1 > commonTwo
+public int commonTwo(String[] a, String[] b) {
+  int countDouble = 0;
+  int countA = 0;
+  int countB = 0;
+  
+  while(countA < a.length && countB < b.length){
+    if(countA > 0 && countB > 0 && a[countA].equals(a[countA-1]) && b[countB].equals(b[countB-1])){
+      countB++;
+      countA++;
+    }
+    else if(a[countA].compareTo(b[countB]) == 0){
+      countDouble++;
+      countB++;
+      countA++;
+    }
+    else if (a[countA].compareTo(b[countB]) > 0){
+      countB++;
+    }
+    else {
+      countA++;
+    }
+  }
+  return countDouble;
+}

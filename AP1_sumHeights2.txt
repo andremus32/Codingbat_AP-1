@@ -1,0 +1,15 @@
+//AP-1 > sumHeights2
+public int sumHeights2(int[] heights, int start, int end) {
+ int difference = 0;
+ for(int i = start; i < end; i++){
+   difference += diff(heights[i], heights[i+1]);
+ }
+ return difference;
+}
+
+public int diff(int x, int y){
+  if(x > y){
+    return x - y;
+  }
+  else return (y - x) * 2;
+}

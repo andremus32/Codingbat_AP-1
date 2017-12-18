@@ -1,0 +1,30 @@
+//AP-1 > hasOne
+public boolean hasOne(int n) {
+  boolean isOne = false;
+  if(n > 10 && n != 10){
+    while(n > 10){
+      if(n%10 == 1){
+        isOne = true;
+        break;
+      }
+      else n = n/10;
+    }
+  }
+  else if(n == 10 || n == 1){
+    isOne = true;
+  }
+  return isOne;
+}
+
+//как вариант можно еще через массив char
+public boolean hasOne(int n) {
+  boolean isOne = false;
+  char[] arr = String.valueOf(n).toCharArray();
+  for(int i = 0; i < arr.length; i++){
+    if(arr[i] == '1'){
+      isOne = true;
+      break;
+    }
+  }
+  return isOne;
+}

@@ -1,0 +1,21 @@
+//AP-1 > dividesSelf
+public boolean dividesSelf(int n) {
+  boolean isDivides = false;
+  int num = n;
+  if (n > 0){
+    while(num > 0){
+      
+      int rightDigit = num % 10;
+      if (rightDigit == 0){
+        break;
+      }
+      if(n % rightDigit != 0){
+        isDivides = false;
+        break;
+      }
+      else isDivides = true;
+      num = num / 10;
+    }
+  }
+  return isDivides;
+}

@@ -1,0 +1,15 @@
+//AP-1 > scoresSpecial
+public int scoresSpecial(int[] a, int[] b) {
+  int maxAB = findMax(a) + findMax(b);
+  return maxAB;
+}
+
+public int findMax(int[] a){
+  int max = 0;
+  for(int i = 0; i < a.length; i++){
+    if(a[i] % 10 == 0 && a[i] > max){
+      max = a[i];
+    }
+  }
+  return max;
+}
